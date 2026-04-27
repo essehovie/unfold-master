@@ -1,0 +1,129 @@
+
+
+/* Item wrapper */
+.portfolio-item-v1 {
+  display: block;
+}
+
+/* Image container */
+.portfolio-img {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image zoom on hover */
+.portfolio-img img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-img:hover img {
+  transform: scale(1.05);
+}
+
+/* Dark overlay on hover */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.portfolio-img:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* Buttons inside overlay */
+.portfolio-overlay-inner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Caption below image */
+.portfolio-caption {
+  padding-top: 1.25rem;
+}
+
+/* Tech stack tags */
+.portfolio-tags {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  opacity: 0.55;
+}
+
+/* Project title */
+.portfolio-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+/* Project description */
+.portfolio-item-v1 p {
+  font-size: 14px;
+  line-height: 1.75;
+  opacity: 0.75;
+}
+
+/* Owl nav arrows */
+.portfolio-slider.owl-carousel .owl-nav button.owl-prev,
+.portfolio-slider.owl-carousel .owl-nav button.owl-next {
+  position: absolute;
+  top: 35%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+.portfolio-slider.owl-carousel .owl-nav button.owl-prev:hover,
+.portfolio-slider.owl-carousel .owl-nav button.owl-next:hover {
+  opacity: 1;
+}
+
+.portfolio-slider.owl-carousel .owl-nav button.owl-prev {
+  left: -30px;
+}
+
+.portfolio-slider.owl-carousel .owl-nav button.owl-next {
+  right: -30px;
+}
+
+/* Owl dots */
+.portfolio-slider.owl-carousel .owl-dots {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.portfolio-slider.owl-carousel .owl-dots .owl-dot span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 4px;
+  transition: background 0.2s ease;
+}
+
+.portfolio-slider.owl-carousel .owl-dots .owl-dot.active span {
+  background: currentColor;
+}
+
+/* Bottom spacing consistent with other sections */
+#portfolio-section {
+  padding-bottom: 5rem;
+}
